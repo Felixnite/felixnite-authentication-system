@@ -75,7 +75,7 @@ def handle_login():
         
         if check_password(user.password, password, user.salt):
             access_token = create_access_token(identity = email) 
-            return jsonify({"token":access_token}), 200
+            return jsonify({"token":access_token, "user": user.serialize()}), 200
         
         else: 
             return jsonify({"message":"bad credentials"}), 400
