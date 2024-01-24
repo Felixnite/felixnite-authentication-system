@@ -28,7 +28,7 @@ const Login = () => {
           <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} id="exampleInputPassword1" />
         </div>
 
-        <button type="submit" className="btn btn-primary" onClick={(e) => login(e)}>Submit</button>
+        <button type="submit" className="btn btn-primary" style={{marginBottom: "20px"}} onClick={(e) => login(e)}>Submit</button>
       </form>
       <button type="button" className="btn btn-primary" onClick={() => navigate("/signup")}>Signup</button>
     </div>
